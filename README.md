@@ -13,4 +13,4 @@
 3. 把 `YYYYWW` 加進 `data/weeks/index.json`
 4. push `main`
 
-TimesFM「8週均」= **未來** 8 週 point forecast 平均，不是近 8 週實測平均。
+TimesFM「未來8週平均」= 未來 8 週 point forecast 平均，不是近 8 週實測平均。

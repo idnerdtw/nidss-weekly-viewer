@@ -54,10 +54,10 @@ function render(week) {
       <article class="card">
         <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照｜僅流感／COVID</h2>
         <ul class="kv">
-          <li>流感：${esc(tfm.flu_latest)} → 8週均 ${esc(tfm.flu_mean8)}（末週~${esc(tfm.flu_last)}）</li>
-          <li>COVID：${esc(tfm.covid_latest)} → 8週均 ${esc(tfm.covid_mean8)}（末週~${esc(tfm.covid_last)}）</li>
+          <li>流感：${esc(tfm.flu_latest)} → 未來8週平均 ${esc(tfm.flu_mean8)}（末週~${esc(tfm.flu_last)}）</li>
+          <li>COVID：${esc(tfm.covid_latest)} → 未來8週平均 ${esc(tfm.covid_mean8)}（末週~${esc(tfm.covid_last)}）</li>
         </ul>
-        <p class="note">${esc(tfm.note || "8週均＝未來8週 TimesFM point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
+        <p class="note">${esc(tfm.note || "未來8週平均＝未來8週 TimesFM point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
       </article>
       <article class="card">
         <h2><span class="dot oth"></span>4️⃣ 其他病原體</h2>
