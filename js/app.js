@@ -17,12 +17,50 @@ function fmtLast5(last5, arrows) {
   return last5.map((n, i) => `${n}${arrows[i] || ""}`).join(" → ");
 }
 
+function hasTimesfm(tfm) {
+  if (!tfm || typeof tfm !== "object") return false;
+  return tfm.flu_mean8 != null || tfm.covid_mean8 != null || tfm.flu_latest != null;
+}
+
+function weekFromUrl() {
+  const q = new URLSearchParams(location.search).get("week");
+  return q ? String(q) : null;
+}
+
+function setUrlWeek(id, { replace = false } = {}) {
+  const url = new URL(location.href);
+  if (id) url.searchParams.set("week", id);
+  else url.searchParams.delete("week");
+  const next = url.pathname + url.search + url.hash;
+  if (replace) history.replaceState({ week: id }, "", next);
+  else history.pushState({ week: id }, "", next);
+}
+
 function render(week) {
   const d = week;
   const tfm = d.timesfm || {};
   const flu = d.influenza || {};
   const covid = d.covid || {};
   const o = d.others || {};
+  const showTfm = hasTimesfm(tfm);
+  const fluCovidCaption = showTfm
+    ? "流感／COVID：26 週長條＋3 週 MA＋TimesFM 8 週參照（正式週報圖）"
+    : "流感／COVID：26 週長條＋3 週 MA（本週尚未納入 TimesFM）";
+
+  const tfmCard = showTfm ? `
+      <article class="card">
+        <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照｜僅流感／COVID</h2>
+        <ul class="kv">
+          <li>流感：${esc(tfm.flu_latest)} → 未來8週平均 ${esc(tfm.flu_mean8)}（末週~${esc(tfm.flu_last)}）</li>
+          <li>COVID：${esc(tfm.covid_latest)} → 未來8週平均 ${esc(tfm.covid_mean8)}（末週~${esc(tfm.covid_last)}）</li>
+        </ul>
+        <p class="note">${esc(tfm.note || "未來8週平均＝未來8週 TimesFM point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
+      </article>` : `
+      <article class="card">
+        <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照</h2>
+        <p class="note">本週尚未納入 TimesFM（自 202635 起正式加入流感／COVID 圖與週報）。</p>
+      </article>`;
+
   app.innerHTML = `
     <section class="meta">
       <div class="range">📅 ${esc(d.week)}｜${esc(d.date_start)} ~ ${esc(d.date_end)}</div>
@@ -51,14 +89,7 @@ function render(week) {
     </section>
 
     <section class="grid" style="margin-top:1rem">
-      <article class="card">
-        <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照｜僅流感／COVID</h2>
-        <ul class="kv">
-          <li>流感：${esc(tfm.flu_latest)} → 未來8週平均 ${esc(tfm.flu_mean8)}（末週~${esc(tfm.flu_last)}）</li>
-          <li>COVID：${esc(tfm.covid_latest)} → 未來8週平均 ${esc(tfm.covid_mean8)}（末週~${esc(tfm.covid_last)}）</li>
-        </ul>
-        <p class="note">${esc(tfm.note || "未來8週平均＝未來8週 TimesFM point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
-      </article>
+      ${tfmCard}
       <article class="card">
         <h2><span class="dot oth"></span>4️⃣ 其他病原體</h2>
         <ul class="kv">
@@ -80,8 +111,8 @@ function render(week) {
         <figcaption>全病原體 26 週趨勢（正式週報圖）</figcaption>
       </figure>
       <figure>
-        <img src="${esc(d.charts?.flu_covid || "")}" alt="流感與 COVID TimesFM 圖 ${esc(d.week)}" />
-        <figcaption>流感／COVID：26 週長條＋3 週 MA＋TimesFM 8 週參照（正式週報圖）</figcaption>
+        <img src="${esc(d.charts?.flu_covid || "")}" alt="流感與 COVID 圖 ${esc(d.week)}" />
+        <figcaption>${fluCovidCaption}</figcaption>
       </figure>
     </section>
 
@@ -99,10 +130,10 @@ function render(week) {
   `;
 }
 
-async function loadWeek(id) {
+async function loadWeek(id, { pushUrl = true } = {}) {
   statusEl.textContent = "載入中…";
   statusEl.hidden = false;
-  app.querySelectorAll(".card, .charts, .meta, .raw, .links").forEach(() => {});
+  statusEl.className = "loading";
   try {
     const res = await fetch(`data/weeks/${id}.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -111,9 +142,11 @@ async function loadWeek(id) {
     weekSelect.value = id;
     const idx = weeks.indexOf(id);
     prevBtn.disabled = idx <= 0;
-    nextBtn.disabled = idx >= weeks.length - 1;
+    nextBtn.disabled = idx < 0 || idx >= weeks.length - 1;
     statusEl.hidden = true;
     render(data);
+    if (pushUrl) setUrlWeek(id);
+    else setUrlWeek(id, { replace: true });
   } catch (e) {
     statusEl.hidden = false;
     statusEl.className = "error";
@@ -134,7 +167,15 @@ async function init() {
     // newest first for UX
     weeks = [...weeks].sort((a, b) => String(b).localeCompare(String(a)));
     syncNav();
-    await loadWeek(weeks[0]);
+    const wanted = weekFromUrl();
+    const start = wanted && weeks.includes(wanted) ? wanted : weeks[0];
+    // replace so the first paint doesn't leave a bogus history entry
+    await loadWeek(start, { pushUrl: false });
+    if (wanted && !weeks.includes(wanted)) {
+      statusEl.hidden = false;
+      statusEl.className = "error";
+      statusEl.textContent = `找不到週次 ${wanted}，已改顯示最新 ${weeks[0]}`;
+    }
   } catch (e) {
     statusEl.className = "error";
     statusEl.textContent = `初始化失敗：${e.message}`;
@@ -149,6 +190,11 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   const i = weeks.indexOf(current);
   if (i >= 0 && i < weeks.length - 1) loadWeek(weeks[i + 1]);
+});
+window.addEventListener("popstate", () => {
+  const w = weekFromUrl();
+  if (w && weeks.includes(w) && w !== current) loadWeek(w, { pushUrl: false });
+  else if (!w && weeks.length) loadWeek(weeks[0], { pushUrl: false });
 });
 
 init();

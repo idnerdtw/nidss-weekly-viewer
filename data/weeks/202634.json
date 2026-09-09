@@ -1,0 +1,74 @@
+{
+  "week": "202634",
+  "date_start": "2026-08-23",
+  "date_end": "2026-08-29",
+  "title": "疾管署｜呼吸道病毒週報",
+  "sources": "NIDSS LARS＋NNDSS 19SC",
+  "influenza": {
+    "last5": [
+      1273,
+      1297,
+      1226,
+      1197,
+      1518
+    ],
+    "arrows": [
+      "",
+      "→",
+      "↓",
+      "→",
+      "↑"
+    ],
+    "judgement": "較前兩週平均（1211.5件）升溫",
+    "flu_a": 1470,
+    "flu_b": 48,
+    "latest": 1518
+  },
+  "covid": {
+    "lars": 1442,
+    "lars_vs_2wk_avg": 1650.5,
+    "lars_arrow": "↓",
+    "severe_week": "202634",
+    "severe": 57,
+    "severe_prev": 62,
+    "severe_arrow": "↓",
+    "deaths": 11,
+    "partial_week": "202635",
+    "partial_severe": 5,
+    "partial_deaths": 1
+  },
+  "timesfm": null,
+  "others": {
+    "spn": {
+      "cur": 87,
+      "prev": 108,
+      "arrow": "↓"
+    },
+    "adeno": {
+      "cur": 33,
+      "prev": 34,
+      "arrow": "→"
+    },
+    "rsv": {
+      "cur": 105,
+      "prev": 111,
+      "arrow": "↓"
+    },
+    "para": {
+      "cur": 2,
+      "prev": 3,
+      "arrow": "↓"
+    }
+  },
+  "clinical": "流感陽性檢體較前兩週平均升溫至 1518 件（Flu A 1470｜Flu B 48），SARS-CoV-2 陽性檢體降至 1442 件、重症完整週 57 例、同週死亡 11 例。高風險患者（長者、嬰幼兒、慢性病）出現呼吸道症狀應及早就醫，並留意流感升溫。",
+  "links": {
+    "lars": "https://nidss.cdc.gov.tw/misc/lars?id=uri",
+    "severe": "https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+  },
+  "charts": {
+    "trend": "charts/202634_trend.png",
+    "flu_covid": "charts/202634_flu_covid.png"
+  },
+  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202634｜2026-08-23 ~ 2026-08-29\n📊 NIDSS LARS＋NNDSS 19SC\n\n〖1️⃣ 流感〗\n▸ 近5週：1273 → 1297→ → 1226↓ → 1197→ → 1518↑\n▸ 較前兩週平均（1211.5件）升溫\n▸ Flu A 1470｜Flu B 48\n\n〖2️⃣ SARS-CoV-2〗\n▸ LARS：1442件（↓ vs 前2週平均 1650.5）\n▸ 重症完整週 202634：57例（↓ vs 前週 62）\n▸ 同週死亡：11例\n▸ 本週 202635 尚未完整：重症 5、死亡 1，不作趨勢判讀\n\n〖3️⃣ 其他病原體〗\n▸ S. pneumoniae 87（↓ vs 108）\n▸ Adenovirus 33（→ vs 34）\n▸ RSV 105（↓ vs 111）\n▸ Parainfluenza 2（↓ vs 3）\n\n〖4️⃣ 臨床提示〗\n流感陽性檢體較前兩週平均升溫至 1518 件（Flu A 1470｜Flu B 48），SARS-CoV-2 陽性檢體降至 1442 件、重症完整週 57 例、同週死亡 11 例。高風險患者（長者、嬰幼兒、慢性病）出現呼吸道症狀應及早就醫，並留意流感升溫。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC",
+  "notes": "本週為 TimesFM 納入前之正式週報；數字為當週發布快照（後續 LARS/NNDSS 可能回修）。"
+}
