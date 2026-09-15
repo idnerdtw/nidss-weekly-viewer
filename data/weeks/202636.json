@@ -1,0 +1,83 @@
+{
+  "week": "202636",
+  "date_start": "2026-09-06",
+  "date_end": "2026-09-12",
+  "title": "疾管署｜呼吸道病毒週報",
+  "sources": "NIDSS LARS＋NNDSS 19SC",
+  "influenza": {
+    "last5": [
+      1228,
+      1200,
+      1532,
+      1917,
+      2466
+    ],
+    "arrows": [
+      "",
+      "↓",
+      "↑",
+      "↑",
+      "↑"
+    ],
+    "judgement": "較前兩週平均（1724.5件）升溫",
+    "flu_a": 2424,
+    "flu_b": 42,
+    "latest": 2466
+  },
+  "covid": {
+    "lars": 1039,
+    "lars_vs_2wk_avg": 1355.5,
+    "lars_arrow": "↓",
+    "severe_week": "202636",
+    "severe": 47,
+    "severe_prev": 64,
+    "severe_arrow": "↓",
+    "deaths": 14,
+    "partial_week": "202637",
+    "partial_severe": 4,
+    "partial_deaths": 0
+  },
+  "timesfm": {
+    "flu_latest": 2466,
+    "flu_mean8": 2413,
+    "flu_last": 1549,
+    "covid_latest": 1039,
+    "covid_mean8": 308,
+    "covid_last": 63,
+    "horizon_start": "202637",
+    "horizon_end": "202644",
+    "note": "未來8週 TimesFM point 均值，非近8週實測平均"
+  },
+  "others": {
+    "spn": {
+      "cur": 98,
+      "prev": 78,
+      "arrow": "↑"
+    },
+    "adeno": {
+      "cur": 39,
+      "prev": 42,
+      "arrow": "↓"
+    },
+    "rsv": {
+      "cur": 186,
+      "prev": 125,
+      "arrow": "↑"
+    },
+    "para": {
+      "cur": 2,
+      "prev": 3,
+      "arrow": "↓"
+    }
+  },
+  "clinical": "流感陽性檢體連續三週明顯上升且以 Flu A 為主，門急診宜提高流感快篩與抗病毒藥物評估門檻；SARS-CoV-2 檢體與完整週重症同步趨緩但仍有死亡，高風險族群疫苗與早期治療仍不可鬆；RSV 亦上升，嬰幼兒與高風險族群需一併留意。",
+  "links": {
+    "lars": "https://nidss.cdc.gov.tw/misc/lars?id=uri",
+    "severe": "https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+  },
+  "charts": {
+    "trend": "charts/202636_trend.png",
+    "flu_covid": "charts/202636_flu_covid.png"
+  },
+  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202636｜2026-09-06 ~ 2026-09-12\n📊 NIDSS LARS＋NNDSS 19SC\n\n〖1️⃣ 流感〗\n▸ 近5週：1228 → 1200→ → 1532↑ → 1917↑ → 2466↑\n▸ 較前兩週平均（1724.5件）升溫\n▸ Flu A 2424｜Flu B 42\n\n〖2️⃣ SARS-CoV-2〗\n▸ LARS：1039件（↓ vs 前2週平均 1355.5）\n▸ 重症完整週 202636：47例（↓ vs 前週 64）\n▸ 同週死亡：14例\n▸ 本週 202637 尚未完整：重症 4、死亡 0，不作趨勢判讀\n\n〖3️⃣ TimesFM 參照｜僅流感／COVID〗\n▸ 流感：2466 → 未來8週平均 2413（末週~1549）\n▸ COVID：1039 → 未來8週平均 308（末週~63）\n\n〖4️⃣ 其他病原體〗\n▸ S. pneumoniae 98（↑ vs 78）\n▸ Adenovirus 39（↓ vs 42）\n▸ RSV 186（↑ vs 125）\n▸ Parainfluenza 2（↓ vs 3）\n\n〖5️⃣ 臨床提示〗\n流感陽性檢體連續三週明顯上升且以 Flu A 為主，門急診宜提高流感快篩與抗病毒藥物評估門檻；SARS-CoV-2 檢體與完整週重症同步趨緩但仍有死亡，高風險族群疫苗與早期治療仍不可鬆；RSV 亦上升，嬰幼兒與高風險族群需一併留意。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+}
