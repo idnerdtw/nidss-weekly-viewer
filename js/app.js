@@ -44,21 +44,21 @@ function render(week) {
   const o = d.others || {};
   const showTfm = hasTimesfm(tfm);
   const fluCovidCaption = showTfm
-    ? "流感／COVID：26 週長條＋3 週 MA＋TimesFM 8 週參照（正式週報圖）"
-    : "流感／COVID：26 週長條＋3 週 MA（本週尚未納入 TimesFM）";
+    ? "流感／COVID：26 週長條＋3 週 MA＋TimesFM 2.5 8 週參照（正式週報圖）"
+    : "流感／COVID：26 週長條＋3 週 MA（本週尚未納入 TimesFM 2.5）";
 
   const tfmCard = showTfm ? `
       <article class="card">
-        <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照｜僅流感／COVID</h2>
+        <h2><span class="dot tfm"></span>3️⃣ TimesFM 2.5 參照｜僅流感／COVID</h2>
         <ul class="kv">
           <li>流感：${esc(tfm.flu_latest)} → 未來8週平均 ${esc(tfm.flu_mean8)}（末週~${esc(tfm.flu_last)}）</li>
           <li>COVID：${esc(tfm.covid_latest)} → 未來8週平均 ${esc(tfm.covid_mean8)}（末週~${esc(tfm.covid_last)}）</li>
         </ul>
-        <p class="note">${esc(tfm.note || "未來8週平均＝未來8週 TimesFM point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
+        <p class="note">${esc(tfm.note || "未來8週平均＝未來8週 TimesFM 2.5 point 均值，不是近8週實測平均")}（${esc(tfm.horizon_start)}–${esc(tfm.horizon_end)}）</p>
       </article>` : `
       <article class="card">
-        <h2><span class="dot tfm"></span>3️⃣ TimesFM 參照</h2>
-        <p class="note">本週尚未納入 TimesFM（自 202635 起正式加入流感／COVID 圖與週報）。</p>
+        <h2><span class="dot tfm"></span>3️⃣ TimesFM 2.5 參照</h2>
+        <p class="note">本週尚未納入 TimesFM 2.5（自 202635 起正式加入流感／COVID 圖與週報）。</p>
       </article>`;
 
   app.innerHTML = `

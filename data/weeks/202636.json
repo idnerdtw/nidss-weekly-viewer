@@ -46,7 +46,7 @@
     "covid_last": 63,
     "horizon_start": "202637",
     "horizon_end": "202644",
-    "note": "未來8週 TimesFM point 均值，非近8週實測平均"
+    "note": "未來8週 TimesFM 2.5 point 均值，非近8週實測平均"
   },
   "others": {
     "spn": {
@@ -79,5 +79,5 @@
     "trend": "charts/202636_trend.png",
     "flu_covid": "charts/202636_flu_covid.png"
   },
-  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202636｜2026-09-06 ~ 2026-09-12\n📊 NIDSS LARS＋NNDSS 19SC\n\n〖1️⃣ 流感〗\n▸ 近5週：1228 → 1200→ → 1532↑ → 1917↑ → 2466↑\n▸ 較前兩週平均（1724.5件）升溫\n▸ Flu A 2424｜Flu B 42\n\n〖2️⃣ SARS-CoV-2〗\n▸ LARS：1039件（↓ vs 前2週平均 1355.5）\n▸ 重症完整週 202636：47例（↓ vs 前週 64）\n▸ 同週死亡：14例\n▸ 本週 202637 尚未完整：重症 4、死亡 0，不作趨勢判讀\n\n〖3️⃣ TimesFM 參照｜僅流感／COVID〗\n▸ 流感：2466 → 未來8週平均 2413（末週~1549）\n▸ COVID：1039 → 未來8週平均 308（末週~63）\n\n〖4️⃣ 其他病原體〗\n▸ S. pneumoniae 98（↑ vs 78）\n▸ Adenovirus 39（↓ vs 42）\n▸ RSV 186（↑ vs 125）\n▸ Parainfluenza 2（↓ vs 3）\n\n〖5️⃣ 臨床提示〗\n流感陽性檢體連續三週明顯上升且以 Flu A 為主，門急診宜提高流感快篩與抗病毒藥物評估門檻；SARS-CoV-2 檢體與完整週重症同步趨緩但仍有死亡，高風險族群疫苗與早期治療仍不可鬆；RSV 亦上升，嬰幼兒與高風險族群需一併留意。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202636｜2026-09-06 ~ 2026-09-12\n📊 NIDSS LARS＋NNDSS 19SC\n\n〖1️⃣ 流感〗\n▸ 近5週：1228 → 1200→ → 1532↑ → 1917↑ → 2466↑\n▸ 較前兩週平均（1724.5件）升溫\n▸ Flu A 2424｜Flu B 42\n\n〖2️⃣ SARS-CoV-2〗\n▸ LARS：1039件（↓ vs 前2週平均 1355.5）\n▸ 重症完整週 202636：47例（↓ vs 前週 64）\n▸ 同週死亡：14例\n▸ 本週 202637 尚未完整：重症 4、死亡 0，不作趨勢判讀\n\n〖3️⃣ TimesFM 2.5 參照｜僅流感／COVID〗\n▸ 流感：2466 → 未來8週平均 2413（末週~1549）\n▸ COVID：1039 → 未來8週平均 308（末週~63）\n\n〖4️⃣ 其他病原體〗\n▸ S. pneumoniae 98（↑ vs 78）\n▸ Adenovirus 39（↓ vs 42）\n▸ RSV 186（↑ vs 125）\n▸ Parainfluenza 2（↓ vs 3）\n\n〖5️⃣ 臨床提示〗\n流感陽性檢體連續三週明顯上升且以 Flu A 為主，門急診宜提高流感快篩與抗病毒藥物評估門檻；SARS-CoV-2 檢體與完整週重症同步趨緩但仍有死亡，高風險族群疫苗與早期治療仍不可鬆；RSV 亦上升，嬰幼兒與高風險族群需一併留意。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC\n🔗 Pages：https://idnerdtw.github.io/nidss-weekly-viewer/?week=202636\n"
 }
