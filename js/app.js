@@ -43,6 +43,13 @@ function render(week) {
   const covid = d.covid || {};
   const o = d.others || {};
   const showTfm = hasTimesfm(tfm);
+  const nl = d.nhia_lines || {};
+  const nhiaLi = (arr) => (Array.isArray(arr) ? arr : []).map((t) => `<li class="nhia">${esc(t)}</li>`).join("");
+  const nhiaChart = d.charts?.nhia_vs_lars ? `
+      <figure>
+        <img src="${esc(d.charts.nhia_vs_lars)}" alt="健保門急診 vs LARS ${esc(d.week)}" />
+        <figcaption>新冠：健保門急診就診人次 vs LARS 陽性件數（2025W01 起，雙軸）</figcaption>
+      </figure>` : "";
   const fluCovidCaption = showTfm
     ? "流感／COVID：26 週長條＋3 週 MA＋TimesFM 2.5 8 週參照（正式週報圖）"
     : "流感／COVID：26 週長條＋3 週 MA（本週尚未納入 TimesFM 2.5）";
@@ -75,11 +82,13 @@ function render(week) {
           <li>近5週：${esc(fmtLast5(flu.last5 || [], flu.arrows || []))}</li>
           <li>${esc(flu.judgement || "")}</li>
           <li>Flu A ${esc(flu.flu_a)}｜Flu B ${esc(flu.flu_b)}</li>
+          ${nhiaLi(nl.flu)}
         </ul>
       </article>
       <article class="card">
         <h2><span class="dot covid"></span>2️⃣ SARS-CoV-2</h2>
         <ul class="kv">
+          ${nhiaLi(nl.covid)}
           <li>LARS：${esc(covid.lars)}件（${esc(covid.lars_arrow)} vs 前2週平均 ${esc(covid.lars_vs_2wk_avg)}）</li>
           <li>重症完整週 ${esc(covid.severe_week)}：${esc(covid.severe)}例（${esc(covid.severe_arrow)} vs 前週 ${esc(covid.severe_prev)}）</li>
           <li>同週死亡：${esc(covid.deaths)}例</li>
@@ -114,10 +123,12 @@ function render(week) {
         <img src="${esc(d.charts?.flu_covid || "")}" alt="流感與 COVID 圖 ${esc(d.week)}" />
         <figcaption>${fluCovidCaption}</figcaption>
       </figure>
+      ${nhiaChart}
     </section>
 
     <div class="links">
       <a href="${esc(d.links?.lars || "#")}" target="_blank" rel="noopener">🔗 LARS</a>
+      ${d.links?.nhia ? `<a href="${esc(d.links.nhia)}" target="_blank" rel="noopener">🔗 健保就診</a>` : ""}
       <a href="${esc(d.links?.severe || "#")}" target="_blank" rel="noopener">🔗 重症／死亡</a>
     </div>
 
