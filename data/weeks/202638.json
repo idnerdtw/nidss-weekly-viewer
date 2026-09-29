@@ -1,0 +1,83 @@
+{
+  "week": "202638",
+  "date_start": "2026-09-20",
+  "date_end": "2026-09-26",
+  "title": "疾管署｜呼吸道病毒週報",
+  "sources": "NIDSS LARS＋NNDSS 19SC",
+  "influenza": {
+    "last5": [
+      1534,
+      1922,
+      2481,
+      2463,
+      2727
+    ],
+    "arrows": [
+      "",
+      "↑",
+      "↑",
+      "↓",
+      "↑"
+    ],
+    "judgement": "較前兩週平均（2472件）升溫",
+    "flu_a": 2685,
+    "flu_b": 42,
+    "latest": 2727
+  },
+  "covid": {
+    "lars": 711,
+    "lars_vs_2wk_avg": 957.0,
+    "lars_arrow": "↓",
+    "severe_week": "202638",
+    "severe": 24,
+    "severe_prev": 52,
+    "severe_arrow": "↓",
+    "deaths": 13,
+    "partial_week": "202639",
+    "partial_severe": 3,
+    "partial_deaths": 0
+  },
+  "timesfm": {
+    "flu_latest": 2727,
+    "flu_mean8": 2023,
+    "flu_last": 1311,
+    "covid_latest": 711,
+    "covid_mean8": 230,
+    "covid_last": 67,
+    "horizon_start": "202639",
+    "horizon_end": "202646",
+    "note": "未來8週 TimesFM 2.5 point 均值，非近8週實測平均"
+  },
+  "others": {
+    "spn": {
+      "cur": 100,
+      "prev": 91,
+      "arrow": "↑"
+    },
+    "adeno": {
+      "cur": 40,
+      "prev": 44,
+      "arrow": "↓"
+    },
+    "rsv": {
+      "cur": 135,
+      "prev": 171,
+      "arrow": "↓"
+    },
+    "para": {
+      "cur": 1,
+      "prev": 0,
+      "arrow": "↑"
+    }
+  },
+  "clinical": "流感近週持續升溫且以 A 型為主，門急診呼吸道病人宜提高流感快篩與抗病毒藥物警覺；COVID 陽性與重症同週回落，但死亡仍有 13 例，高風險族群疫苗與抗病毒及時處置仍應維持。",
+  "links": {
+    "lars": "https://nidss.cdc.gov.tw/misc/lars?id=uri",
+    "severe": "https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+  },
+  "charts": {
+    "trend": "charts/202638_trend.png",
+    "flu_covid": "charts/202638_flu_covid.png"
+  },
+  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202638｜2026-09-20 ~ 2026-09-26\n📊 NIDSS LARS＋NNDSS 19SC\n\n〖1️⃣ 流感〗\n▸ 近5週：1534 → 1922↑ → 2481↑ → 2463→ → 2727↑\n▸ 較前兩週平均（2472件）升溫\n▸ Flu A 2685｜Flu B 42\n\n〖2️⃣ SARS-CoV-2〗\n▸ LARS：711件（↓ vs 前2週平均 957）\n▸ 重症完整週 202638：24例（↓ vs 前週 52）\n▸ 同週死亡：13例\n▸ 本週 202639 尚未完整：重症 3、死亡 0，不作趨勢判讀\n\n〖3️⃣ TimesFM 2.5 參照｜僅流感／COVID〗\n▸ 流感：2727 → 未來8週平均 2023（末週~1311）\n▸ COVID：711 → 未來8週平均 230（末週~67）\n\n〖4️⃣ 其他病原體〗\n▸ S. pneumoniae 100（↑ vs 91）\n▸ Adenovirus 40（↓ vs 44）\n▸ RSV 135（↓ vs 171）\n▸ Parainfluenza 1（→ vs 0）\n\n〖5️⃣ 臨床提示〗\n流感近週持續升溫且以 A 型為主，門急診呼吸道病人宜提高流感快篩與抗病毒藥物警覺；COVID 陽性與重症同週回落，但死亡仍有 13 例，高風險族群疫苗與抗病毒及時處置仍應維持。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC\n🔗 Pages：https://idnerdtw.github.io/nidss-weekly-viewer/?week=202638"
+}
