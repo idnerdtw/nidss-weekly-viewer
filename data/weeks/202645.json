@@ -1,0 +1,273 @@
+{
+  "week": "202645",
+  "date_start": "2026-11-08",
+  "date_end": "2026-11-14",
+  "title": "疾管署｜呼吸道病毒週報",
+  "sources": "NIDSS LARS＋NNDSS 19SC＋健保就診",
+  "influenza": {
+    "last5": [
+      2154,
+      2009,
+      1575,
+      1258,
+      1000
+    ],
+    "arrows": [
+      "",
+      "↓",
+      "↓",
+      "↓",
+      "↓"
+    ],
+    "judgement": "較前兩週平均（1416.5件）趨緩",
+    "flu_a": 976,
+    "flu_b": 24,
+    "latest": 1000
+  },
+  "covid": {
+    "lars": 71,
+    "lars_vs_2wk_avg": 85.5,
+    "lars_arrow": "↓",
+    "severe_week": "202645",
+    "severe": 3,
+    "severe_prev": 2,
+    "severe_arrow": "↑",
+    "deaths": 0,
+    "partial_week": "202646",
+    "partial_severe": 0,
+    "partial_deaths": 0
+  },
+  "timesfm": {
+    "flu_latest": 1000,
+    "flu_mean8": 839,
+    "flu_last": 860,
+    "covid_latest": 71,
+    "covid_mean8": 55,
+    "covid_last": 48,
+    "horizon_start": "202646",
+    "horizon_end": "202701",
+    "note": "未來8週 TimesFM 2.5 point 均值，非近8週實測平均"
+  },
+  "others": {
+    "spn": {
+      "cur": 62,
+      "prev": 76,
+      "arrow": "↓"
+    },
+    "adeno": {
+      "cur": 42,
+      "prev": 36,
+      "arrow": "↑"
+    },
+    "rsv": {
+      "cur": 41,
+      "prev": 41,
+      "arrow": "→"
+    },
+    "para": {
+      "cur": 0,
+      "prev": 3,
+      "arrow": "↓"
+    }
+  },
+  "clinical": "流感陽性檢體已連續五週下降且以 Flu A 為主，類流感門急診人次同步趨緩，惟本週仍有 1000 件，門急診宜持續流感快篩並對高風險者評估抗病毒藥物。SARS-CoV-2 健保門急診與 LARS 同步下降，完整週重症 3 例、同週死亡 0，COVID 就醫負荷已低，高風險族群疫苗與早期治療仍不可鬆。",
+  "links": {
+    "lars": "https://nidss.cdc.gov.tw/misc/lars?id=uri",
+    "nhia": "https://nidss.cdc.gov.tw/Cdcwnh/Cdcwnh01?disease=1",
+    "severe": "https://nidss.cdc.gov.tw/nndss/disease?id=19SC"
+  },
+  "nhia_lines": {
+    "covid": [
+      "健保門急診：1,432人次（↓ vs 前2週平均 1,877｜2026峰值 5%）",
+      "其中急診 69（↓ vs 138｜峰值 2%）、占 5%；門診 1,363",
+      "健保人次與 LARS 趨勢一致（r=0.97，同步）；每 1 件 LARS 約對應 20 人次就醫（2025 高峰 26）",
+      "LARS／定點因居家快篩多未送驗而低估，僅看趨勢"
+    ],
+    "flu": [
+      "健保類流感門急診 85,308（↓ vs 92,677）｜急診 7,075（↓ vs 8,360）"
+    ]
+  },
+  "nhia": {
+    "status": "ok",
+    "latest_week": "202645",
+    "source": "https://nidss.cdc.gov.tw/Cdcwnh/Cdcwnh01?disease=1",
+    "covid": {
+      "op": {
+        "latest": 1363,
+        "prev2": [
+          1844,
+          1634
+        ],
+        "prev2_avg": 1739.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -21.6,
+        "peak_year": "2026",
+        "peak_week": "202632",
+        "peak": 24189,
+        "pct_of_peak": 5.6
+      },
+      "er": {
+        "latest": 69,
+        "prev2": [
+          159,
+          117
+        ],
+        "prev2_avg": 138.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -50.0,
+        "peak_year": "2026",
+        "peak_week": "202631",
+        "peak": 3486,
+        "pct_of_peak": 2.0
+      },
+      "tot": {
+        "latest": 1432,
+        "prev2": [
+          2003,
+          1751
+        ],
+        "prev2_avg": 1877.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -23.7,
+        "peak_year": "2026",
+        "peak_week": "202632",
+        "peak": 27614,
+        "pct_of_peak": 5.2
+      },
+      "er_share_pct": 4.8,
+      "er_rate_pct_latest": 0.05
+    },
+    "ili": {
+      "op": {
+        "latest": 78233,
+        "prev2": [
+          86619,
+          82015
+        ],
+        "prev2_avg": 84317.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -7.2,
+        "peak_year": "2026",
+        "peak_week": "202637",
+        "peak": 131483,
+        "pct_of_peak": 59.5
+      },
+      "er": {
+        "latest": 7075,
+        "prev2": [
+          9014,
+          7706
+        ],
+        "prev2_avg": 8360.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -15.4,
+        "peak_year": "2026",
+        "peak_week": "202639",
+        "peak": 13576,
+        "pct_of_peak": 52.1
+      },
+      "tot": {
+        "latest": 85308,
+        "prev2": [
+          95633,
+          89721
+        ],
+        "prev2_avg": 92677.0,
+        "arrow": "↓",
+        "pct_vs_prev2": -8.0,
+        "peak_year": "2026",
+        "peak_week": "202637",
+        "peak": 143555,
+        "pct_of_peak": 59.4
+      },
+      "er_share_pct": 8.3,
+      "er_rate_pct_latest": 5.48
+    },
+    "vs_lars": {
+      "status": "ok",
+      "weeks": "202501–202645",
+      "n": 98,
+      "latest_week": "202645",
+      "pearson_raw": 0.9725,
+      "spearman": 0.9445,
+      "pearson_log": 0.9242,
+      "lags": {
+        "0": {
+          "pearson_raw": 0.9725,
+          "pearson_log": 0.9242,
+          "spearman": 0.9445,
+          "n": 98
+        },
+        "1": {
+          "pearson_raw": 0.9513,
+          "pearson_log": 0.9238,
+          "spearman": 0.9512,
+          "n": 97
+        },
+        "-1": {
+          "pearson_raw": 0.9223,
+          "pearson_log": 0.9062,
+          "spearman": 0.9177,
+          "n": 97
+        },
+        "2": {
+          "pearson_raw": 0.8663,
+          "pearson_log": 0.9044,
+          "spearman": 0.9423,
+          "n": 96
+        },
+        "-2": {
+          "pearson_raw": 0.8173,
+          "pearson_log": 0.8673,
+          "spearman": 0.8758,
+          "n": 96
+        }
+      },
+      "best_lag_pearson_raw": 0,
+      "best_lag_pearson_log": 0,
+      "ratio_latest": {
+        "week": "202645",
+        "nhia": 1432,
+        "lars": 71,
+        "ratio": 20.2
+      },
+      "ratio_last4": 19.3,
+      "peaks": {
+        "2025": {
+          "nhia_peak": {
+            "week": "202523",
+            "nhia": 75067,
+            "lars": 2881,
+            "ratio": 26.1
+          },
+          "lars_peak": {
+            "week": "202523",
+            "nhia": 75067,
+            "lars": 2881,
+            "ratio": 26.1
+          }
+        },
+        "2026": {
+          "nhia_peak": {
+            "week": "202632",
+            "nhia": 27614,
+            "lars": 1707,
+            "ratio": 16.2
+          },
+          "lars_peak": {
+            "week": "202632",
+            "nhia": 27614,
+            "lars": 1707,
+            "ratio": 16.2
+          }
+        }
+      }
+    }
+  },
+  "charts": {
+    "trend": "charts/202645_trend.png",
+    "flu_covid": "charts/202645_flu_covid.png",
+    "nhia_vs_lars": "charts/202645_nhia_vs_lars.png"
+  },
+  "report_text": "🦠 疾管署｜呼吸道病毒週報\n📅 202645｜2026-11-08 ~ 2026-11-14\n📊 NIDSS LARS＋NNDSS 19SC＋健保就診\n\n〖1️⃣ 流感〗\n▸ 近5週：2154 → 2009↓ → 1575↓ → 1258↓ → 1000↓\n▸ 較前兩週平均（1416.5件）趨緩\n▸ Flu A 976｜Flu B 24\n▸ 健保類流感門急診 85,308（↓ vs 92,677）｜急診 7,075（↓ vs 8,360）\n\n〖2️⃣ SARS-CoV-2〗\n▸ 健保門急診：1,432人次（↓ vs 前2週平均 1,877｜2026峰值 5%）\n▸ 　其中急診 69（↓ vs 138｜峰值 2%）、占 5%；門診 1,363\n▸ 健保人次與 LARS 趨勢一致（r=0.97，同步）；每 1 件 LARS 約對應 20 人次就醫（2025 高峰 26）\n▸ LARS／定點因居家快篩多未送驗而低估，僅看趨勢\n▸ LARS：71件（↓ vs 前2週平均 85.5）\n▸ 重症完整週 202645：3例（↑ vs 前週 2）\n▸ 同週死亡：0例\n▸ 本週 202646 尚未完整：重症 0、死亡 0，不作趨勢判讀\n\n〖3️⃣ TimesFM 2.5 參照｜僅流感／COVID〗\n▸ 流感：1000 → 未來8週平均 839（末週~860）\n▸ COVID：71 → 未來8週平均 55（末週~48）\n\n〖4️⃣ 其他病原體〗\n▸ S. pneumoniae 62（↓ vs 76）\n▸ Adenovirus 42（↑ vs 36）\n▸ RSV 41（→ vs 41）\n▸ Parainfluenza 0（↓ vs 3）\n\n〖5️⃣ 臨床提示〗\n流感陽性檢體已連續五週下降且以 Flu A 為主，類流感門急診人次同步趨緩，惟本週仍有 1000 件，門急診宜持續流感快篩並對高風險者評估抗病毒藥物。SARS-CoV-2 健保門急診與 LARS 同步下降，完整週重症 3 例、同週死亡 0，COVID 就醫負荷已低，高風險族群疫苗與早期治療仍不可鬆。\n\n🔗 LARS：https://nidss.cdc.gov.tw/misc/lars?id=uri\n🔗 健保就診：https://nidss.cdc.gov.tw/Cdcwnh/Cdcwnh01?disease=1\n🔗 重症／死亡：https://nidss.cdc.gov.tw/nndss/disease?id=19SC\n🔗 Pages：https://idnerdtw.github.io/nidss-weekly-viewer/?week=202645"
+}
